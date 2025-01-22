@@ -35,7 +35,7 @@ n = 8  # Number of nodes
 adj_matrix = construct_adjacency_matrix(edges, n)
 print("Adjacency Matrix:")
 for row in adj_matrix:
-    print(row)
+    print("  ".join(map(str, row)))
 
 # Step 2: Convert Graph to Adjacency List for Tree
 tree = {
