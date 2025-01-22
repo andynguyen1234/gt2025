@@ -81,7 +81,7 @@ if __name__ == "__main__":
 
         return wcc_count
 
-    # Example matrix
+    # Matrix
     G = [
         [0, 1, 0, 1, 0, 0, 0, 0, 0],
         [0, 0, 1, 0, 0, 1, 0, 0, 0],
@@ -97,6 +97,15 @@ if __name__ == "__main__":
     # Find the number of strongly and weakly connected components
     scc_count = kosaraju(G)
     wcc_count = count_weakly_connected_components(G)
+
+    # Function to print the adjacency matrix
+    def print_adjacency_matrix(matrix):
+        print("Adjacency Matrix:")
+        for row in matrix:
+            print("  ".join(map(str, row)))
+
+    # Print the adjacency matrix
+    print_adjacency_matrix(G)
 
     print("Number of strongly connected components:", scc_count)
     print("Number of weakly connected components:", wcc_count)
